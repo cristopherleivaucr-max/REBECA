@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Rebeca 💙</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #40e0d0, #0f9b8e);
+    color: white;
+}
+
+/* Secciones */
+.seccion {
+    display: none;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#sec1 { display: block; }
+
+/* Tarjeta */
+.card {
+    background: rgba(255,255,255,0.15);
+    padding: 25px;
+    border-radius: 20px;
+    max-width: 500px;
+    margin: auto;
+}
+
+/* Botones */
+button {
+    width: 80%;
+    max-width: 250px;
+    margin-top: 15px;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1em;
+    background: white;
+    color: #0f9b8e;
+}
+
+#no {
+    position: fixed;
+}
+
+/* Frases */
+.frase {
+    background: rgba(255,255,255,0.2);
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- SECCIÓN 1 -->
+<div id="sec1" class="seccion">
+    <div class="card">
+        <h1>💖 Rebeca 💖</h1>
+        <p>No sé exactamente en qué momento empezó todo...</p>
+        <p>Pero sin darme cuenta, te volviste alguien muy especial para mí.</p>
+        <p>Lo nuestro surgió sin planearlo... simplemente pasó.</p>
+        <p>Y contigo todo se siente natural, bonito y real ✨</p>
+
+        <button onclick="ir(2)">Continuar 💫</button>
+    </div>
+</div>
+
+<!-- SECCIÓN 2 -->
+<div id="sec2" class="seccion">
+    <div class="card">
+        <h1>¿Quieres ser mi novia? 💕</h1>
+
+        <button onclick="ir(3)">Sí 🐿️</button>
+        <button id="no" onclick="moverNo()">No 😢</button>
+    </div>
+</div>
+
+<!-- SECCIÓN 3 -->
+<div id="sec3" class="seccion">
+    <div class="card">
+        <h1>💭 A veces no lo digo, pero…</h1>
+        <p>Pienso en ti más de lo que imaginas 💙</p>
+
+        <div class="frase">“Eres mi misión ahora.” — Logan</div>
+        <div class="frase">“Si tú saltas, yo salto.” — Spider-Man</div>
+        <div class="frase">“Cuando estoy contigo, todo tiene sentido.” — Superman</div>
+        <div class="frase">“Siempre vuelvo a ti.” — Spider-Man 2</div>
+        <div class="frase">“Eres la razón por la que sigo adelante.” — Batman</div>
+
+        <h3>💞 No dejo de pensar en ti 💞</h3>
+    </div>
+</div>
+
+<script>
+function ir(num) {
+    document.getElementById("sec1").style.display = "none";
+    document.getElementById("sec2").style.display = "none";
+    document.getElementById("sec3").style.display = "none";
+
+    document.getElementById("sec" + num).style.display = "block";
+}
+
+function moverNo() {
+    var x = Math.random() * (window.innerWidth - 120);
+    var y = Math.random() * (window.innerHeight - 80);
+
+    var boton = document.getElementById("no");
+    boton.style.left = x + "px";
+    boton.style.top = y + "px";
+}
+</script>
+
+</body>
+</html>
